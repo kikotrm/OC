@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="script-dashboard.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-3 p-3 text-black">
+                <input type="checkbox" id="check">
+                <label for="check">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </label>
+                <div class="sidebar">
+                    <header>OpenCourt</header>
+                    <ul>
+                        <li><a href="dashboardeng.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="dashaboutuseng.html"><i class="fas fa-users"></i>About Us</a></li>
+                        <li><a href="dashcontacteng.html"><i class="fas fa-inbox"></i>Contact Us</a></li>
+                        <li><a href="dashfaqeng.html"><i class="fas fa-question"></i>FAQ'S</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <a href="dashboard.html">
+                    <img src="./Imagens/logo_opencourt.png" alt="Logo Open Court" id="logo" />
+                </a>
+            </div>
+
+            <div class="col-sm-3 p-3 text-black d-flex justify-content-center align-items-center">
+                <div class="lang-menu">
+                    <div class="selected-lang">English</div>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html" class="pt">Português</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-login">
+                    <img src="./Imagens/user-interface.png" alt="Click here" class="image-button" id="imageButton">
+
+                    <div class="popup" id="popup">
+                        <button class="login" onclick="redirectToProfile()">Edit Profile</button>
+                        <button class="register" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center py-5">
+                <div class="col-md-6 text-center px-4">
+                    <h1 class="titleocstar">OpenCourt <img src="./Imagens/logostar.png" alt="logo star" class="starimg"></h1>
+                    <div class="containertext">
+                        <h1>Find the perfect place to play sports!</h1>
+                        <p>From football to surfing, discover the best spaces near you and arrange a game with friends. Easy, fast, and fun!
+                            <p>
+                                <h4>Download our app and start now!</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 custom-flex-column ">
+                    <img src="./Imagens/phone.png" alt="Imagem de um telefone com a aplicação" class="img-fluid" id="phone-image">
+                    <button class="download-button ">
+                    <img src="./Imagens/download.png " alt="Icon " class="button-icon ">
+                    <a href="app/opencourtapp.apk" class="button-text">Instalar Agora</a>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="line ">
+            <div class="col ">
+                <img src="Imagens/logo_opencourt.png " class="logo-footer ">
+                <p>Find quality courts and organize your games with ease. Open Court offers a practical and efficient platform so you can focus on what really matters: the game.</p>
+            </div>
+            <div class="col ">
+                <h3>Our Location
+                    <div class="underline "><span></span></div>
+                </h3>
+                <p>Av. Aliança Povo M.F.A S/N, 2800-253 Almada, Portugal</p>
+                <ul>
+                    <li>
+                        <span>Phone:</span>
+                        <a href="tel:+ 21 273 9280 ">+ 21 273 9280</a>
+                    </li>
+                    <li class="email-id ">
+                        <span>Email:</span> <a href="mailto:opencourt.pt@gmail.com ">opencourt.pt@gmail.com</a>
+                    </li>
+                    <li>
+                        <span>Website:</span> <a href="dashboard.html">opencourt.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col ">
+                <h3>Links
+                    <div class="underline "><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="dashboardeng.html">Home</a></li>
+                    <li><a href="dashaboutuseng.html">About Us</a></li>
+                    <li><a href="dashcontacteng.html">Contact Us</a></li>
+                    <li><a href="dashfaqeng.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col ">
+                <h3>Redes Socias
+                    <div class="underline"><span></span></div>
+                </h3>
+                <div class="footer-social-icons">
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-discord"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright ">&copy; 2025 OpenCourt. Designed by <a href="dashboard.html" target="_blank ">OpenCourt</a>.</p>
+    </footer>
+
+</body>
+
+</html>

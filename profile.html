@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-3 p-3 text-black">
+                <input type="checkbox" id="check">
+                <label for="check">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </label>
+                <div class="sidebar">
+                    <header>OpenCourt</header>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="dashaboutus.html"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                        <li><a href="dashcontactus.html"><i class="fas fa-inbox"></i>Contacte-nos</a></li>
+                        <li><a href="dashfaq.html"><i class="fas fa-question"></i>FAQ'S</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo (Centralizado) -->
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <a href="dashboard.html">
+                    <img src="./Imagens/logo_opencourt.png" alt="Logo Open Court" id="logo" />
+                </a>
+            </div>
+
+
+            <!-- Seletor de Idioma -->
+            <div class="col-sm-3 p-3 text-black d-flex justify-content-center align-items-center">
+                
+            </div>
+            <section class="vh-100">
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-xl-10">
+                            <div class="card custom-shadow">
+                                <div class="row g-0">
+                                    <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                        <img src="./Imagens/user-interface.png" alt="profile form" class="img-profile" />
+                                    </div>
+                                    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                        <div class="card-body p-4 p-lg-5 text-black">
+                                            <form>
+
+
+                                                <h1 class="fw-normal mb-3 pb-3 login-title">YOUR PROFILE</h1>
+
+                                                <!-- Display Email -->
+                                                <h5><i class="fas fa-envelope"></i>Email:</h5>
+                                                <p id="emailDisplay">Loading...</p>
+                                                <button id="editEmailButton" class="btn btn-primary" type="button">Edit Email</button>
+                                                <hr>
+
+                                                <!-- Display Username -->
+                                                <h5><i class="fas fa-user"></i>Username:</h5>
+                                                <p id="usernameDisplay">Loading...</p>
+                                                <button id="editUsernameButton" class="btn btn-primary" type="button">Edit Username</button>
+                                                <hr>
+
+                                                <!-- Button Actions -->
+                                                <div class="pt-1 mb-4">
+                                                    <button data-mdb-button-init data-mdb-ripple-init class="buttonchangepass" type="button">Change Password</button>
+                                                </div>
+                                                <div class="pt-1 mb-4">
+                                                    <button id="logoutButton" data-mdb-button-init data-mdb-ripple-init class="buttonlogout" button>Logout</button>
+                                                </div>
+                                                <div class="pt-1 mb-4 ">
+                                                    <button data-mdb-button-init data-mdb-ripple-init class="buttondelete " type="button ">Delete Account</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="line ">
+                        <div class="col ">
+                            <img src="Imagens/logo_opencourt.png " class="logo-footer ">
+                            <p>Encontra campos de qualidade e organiza os teus jogos com facilidade. O Open Court oferece uma plataforma prática e eficiente para que te possas concentrar no que realmente importa: o jogo.</p>
+                        </div>
+                        <div class="col ">
+                            <h3>Nossa localização
+                                <div class="underline "><span></span></div>
+                            </h3>
+                            <p>Av. Aliança Povo M.F.A S/N, 2800-253 Almada, Portugal</p>
+                            <ul>
+                                <li>
+                                    <span>Phone:</span>
+                                    <a href="tel:+ 21 273 9280 ">+ 21 273 9280</a>
+                                </li>
+                                <li class="email-id ">
+                                    <span>Email:</span> <a href="mailto:info@yoursite.com ">opencourtcontact@gmail.com</a>
+                                </li>
+                                <li>
+                                    <span>Website:</span> <a href="# ">opencourt.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col ">
+                            <h3>Links
+                                <div class="underline "><span></span></div>
+                            </h3>
+                            <ul>
+                                <li><a href=" ">Home</a></li>
+                                <li><a href=" ">About Us</a></li>
+                                <li><a href=" ">Contact Us</a></li>
+                                <li><a href=" ">Termos de Uso</a></li>
+                            </ul>
+                        </div>
+                        <div class="col ">
+                            <h3>Redes Sociais
+                                <div class="underline "><span></span></div>
+                            </h3>
+                            <div class="footer-social-icons ">
+                                <i class="fab fa-youtube "><a href="# "></a></i>
+                                <i class="fab fa-instagram "><a href="# "></a></i>
+                                <i class="fab fa-twitter "><a href="# "></a></i>
+                                <i class="fab fa-discord "><a href="# "></a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="copyright ">&copy; 2025 OpenCourt. Designed by <a href="https://www.opencourt.com " target="_blank ">OpenCourt</a>.</p>
+                </footer>
+
+            </section>
+            <script src="script-profile.js" defer></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="script-dashboard.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- Sidebar e Menu -->
+            <div class="col-12 col-md-3 p-3 text-black">
+                <input type="checkbox" id="check">
+                <label for="check">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </label>
+                <div class="sidebar">
+                    <header>OpenCourt</header>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i>Início</a></li>
+                        <li><a href="dashaboutus.html"><i class="fas fa-users"></i>Sobre Nós</a></li>
+                        <li><a href="dashcontact.html"><i class="fas fa-inbox"></i>Contactos</a></li>
+                        <li><a href="dashfaq.html"><i class="fas fa-question"></i>FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="col-12 col-md-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <a href="dashboard.html">
+                    <img src="./Imagens/logo_opencourt.png" alt="Logótipo Open Court" id="logo" class="img-fluid" />
+                </a>
+            </div>
+
+            <!-- Idioma e Login -->
+            <div class="col-12 col-md-3 p-3 text-black d-flex justify-content-center align-items-center flex-column flex-md-row gap-2">
+                <div class="lang-menu">
+                    <div class="selected-lang">Português</div>
+                    <ul>
+                        <li><a href="dashboardeng.html" class="us">Inglês</a></li>
+                    </ul>
+                </div>
+                <div class="container-login position-relative">
+                    <img src="./Imagens/user-interface.png" alt="Clique aqui" class="image-button" id="imageButton">
+                    <div class="popup position-absolute" id="popup">
+                        <button class="login" onclick="redirectToProfile()">Editar Perfil</button>
+                        <button class="register" onclick="logout()">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="row d-flex align-items-center justify-content-center py-5">
+            <div class="col-12 col-md-6 text-center px-4">
+                <h1 class="titleocstar">OpenCourt <img src="./Imagens/logostar.png" alt="logo estrela" class="starimg"></h1>
+                <div class="containertext">
+                    <h1>Encontra o local perfeito para praticar desporto!</h1>
+                    <p>Desde futebol até surf, descobre os melhores espaços perto de ti e organiza um jogo com os teus amigos. Fácil, rápido e divertido!</p>
+                    <h4>Descarrega a nossa aplicação e começa já!</h4>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                <img src="./Imagens/phone.png" alt="Imagem de um telefone com a aplicação" class="img-fluid" id="phone-image">
+                <a href="app/opencourtapp.apk" class="btn btn-primary mt-3 d-flex align-items-center gap-2 download-button">
+                    <img src="./Imagens/download.png" alt="Ícone" class="button-icon">
+                    <span>Instalar Agora</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé continua igual -->
+
+
+    <footer>
+        <div class="line">
+            <div class="col">
+                <img src="Imagens/logo_opencourt.png" class="logo-footer">
+                <p>Encontra campos de qualidade e organiza os teus jogos com facilidade. A OpenCourt oferece uma plataforma prática e eficiente para que te possas concentrar no que realmente importa: o jogo.</p>
+            </div>
+            <div class="col">
+                <h3>A Nossa Localização
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Av. Aliança Povo M.F.A S/N, 2800-253 Almada, Portugal</p>
+                <ul>
+                    <li>
+                        <span>Telefone:</span>
+                        <a href="tel:+21 273 9280">+21 273 9280</a>
+                    </li>
+                    <li class="email-id">
+                        <span>Email:</span> <a href="mailto:opencourt.pt@gmail.com">opencourt.pt@gmail.com</a>
+                    </li>
+                    <li>
+                        <span>Website:</span> <a href="dashboard.html">opencourt.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Links
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="dashboard.html">Início</a></li>
+                    <li><a href="dashaboutus.html">Sobre Nós</a></li>
+                    <li><a href="dashcontact.html">Contactos</a></li>
+                    <li><a href="dashfaq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Redes Socias
+                    <div class="underline"><span></span></div>
+                </h3>
+                <div class="footer-social-icons">
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-discord"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">&copy; 2025 OpenCourt. Desenvolvido por <a href="dashboard.html" target="_blank">OpenCourt</a>.</p>
+    </footer>
+
+</body>
+
+</html>

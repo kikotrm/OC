@@ -1,0 +1,162 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="script-dashboard.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-3 p-3 text-black ">
+                <input type="checkbox" id="check">
+                <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>  
+    </label>
+                <div class="sidebar">
+                    <header>OpenCourt </header>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="dashaboutus.html"><i class="fas fa-users"></i>About Us</a></li>
+                        <li><a href="dashcontact.html"><i class="fas fa-inbox"></i>Contact Us</a></li>
+                        <li><a href="dashfaq.html"><i class="fas fa-question"></i>FAQ'S</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <a href="dashboardeng.html">
+                    <img src="./Imagens/logo_opencourt.png" alt="Logo Open Court" id="logo" />
+                </a>
+            </div>
+            <div class="col-sm-3 p-3 text-black d-flex justify-content-center align-items-center">
+                <div class="lang-menu">
+                    <div class="selected-lang">
+                        English
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="dashaboutus.html" class="us">Portuguès
+
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <img src="./Imagens/fotogrupo.jpeg" alt="group photo" class="aboutus-image" />
+            </div>
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center ">
+                <div class="containeraboutus">
+                    <p>About Us</p>
+
+                    <h2> We always find the perfect court</h2>
+
+                    <p>At OpenCourt, our mission is to simplify the way you find spaces to play sports. We know that it is often difficult to find an available court for your football, basketball, or other sports matches. That’s why we created an application
+                        that allows you to easily and quickly search for nearby courts. With our platform, we want to ensure that you never miss the opportunity to play your favorite sport. We are a young and passionate team dedicated to improving the
+                        user experience and making physical activities more accessible.</p>
+
+                    <a href="contactus.html" class="about-button">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="title-members">
+                <p class="lead">Our Team</p>
+                <h3>Awesome Team Members</h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="team-container d-flex justify-content-center ">
+                    <div class="team-member">
+                        <img src="./Imagens/membroum.jpeg" alt="Team Member 1" class="img-fluid">
+                        <div class="team-name">Francisco Marques</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="./Imagens/membroum.jpeg" alt="Team Member 2" class="img-fluid">
+                        <div class="team-name">Dinis Paulino</div>
+                    </div>
+                    <div class="team-member">
+                        <img src="./Imagens/membroum.jpeg" alt="Team Member 3" class="img-fluid">
+                        <div class="team-name">Ronish Regmi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 p-3 text-black d-flex justify-content-center align-items-center position-relative">
+                <img src="./Imagens/courtaboutus.jpg" alt="group photo" class="courtimageaboutus" />
+
+
+                <div class="image-text">
+                    <b>Hire up now</b>
+
+                    <h2>Find the best court with OpenCourt</h2>
+
+                    <p>At OpenCourt, our mission is to simplify the way you find spaces to play sports.</p>
+
+                    <a href="app/opencourtapp.apk" class="about-button">Install Now</a>
+                </div>
+            </div>
+
+            <footer>
+                <div class="line">
+                    <div class="col">
+                        <img src="Imagens/logo_opencourt.png" class="logo-footer">
+                        <p>Encontre quadras de qualidade e organize seus jogos com facilidade. Open Court oferece uma plataforma prática e eficiente para que você possa se concentrar no que mais importa: o jogo.</p>
+                    </div>
+                    <div class="col">
+                        <h3>Nossa localização
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <p>Av. Aliança Povo M.F.A S/N, 2800-253 Almada, Portugal</p>
+                        <li>
+                            <span>Phone:</span>
+                            <a href="tel:+ 21 273 9280">+ 21 273 9280</a>
+                        </li>
+                        <li class="email-id">
+                            <span>Email:</span> <a href="mailto:opencourt.pt@gmail.com">opencourt.pt@gmail.com</a>
+                        </li>
+                        <li>
+                            <span>Website:</span> <a href="dashboard.html">opencourt.com</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Links
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <ul>
+                            <li><a href="dashboardeng.html">Início</a></li>
+                            <li><a href="dashaboutuseng.html">Sobre Nós</a></li>
+                            <li><a href="dashcontacteng.html">Contacte-nos</a></li>
+                            <li><a href="dashfaqeng.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Redes Socias
+                            <div class="underline"><span></span></div>
+                        </h3>
+                        <div class="footer-social-icons">
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-discord"></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">&copy; 2025 OpenCourt. Designed by <a href="dashboard.html" target="_blank">OpenCourt</a>.</p>
+            </footer>
+
+</body>
+
+</html>

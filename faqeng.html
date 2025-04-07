@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - OpenCourt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="boot.css" />
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
+    <script src="script.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-sm-3 p-3 text-black">
+                <input type="checkbox" id="check" />
+                <label for="check">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </label>
+                <div class="sidebar">
+                    <header>OpenCourt</header>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="aboutus.html"><i class="fas fa-users"></i>About Us</a></li>
+                        <li><a href="contactus.html"><i class="fas fa-inbox"></i>Contact Us</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question"></i>FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
+                <a href="index.html">
+                    <img src="./Imagens/logo_opencourt.png" alt="OpenCourt Logo" id="logo" />
+                </a>
+            </div>
+
+            <div class="col-sm-3 p-3 text-black d-flex justify-content-center align-items-center">
+                <div class="lang-menu">
+                    <div class="selected-lang">English</div>
+                    <ul>
+                        <li><a href="faq.html" class="pt">Português</a></li>
+                    </ul>
+                </div>
+                <div class="container-login">
+                    <img src="./Imagens/user-interface.png" alt="Click here" class="image-button" id="imageButton" />
+                    <div class="popup" id="popup">
+                        <button class="login" onclick="redirectToLogin()">Login</button>
+                        <button class="register" onclick="redirectToRegister()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Styled FAQ Section -->
+    <section class="faq_area section_padding_130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-lg-8">
+                    <div class="section-heading text-center text-white">
+                        <h1 class="faqtitle">Frequently Asked Questions (FAQ)</h1>
+                        <p>Find answers to the most common questions below.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-lg-10">
+                    <div class="faq-accordian" id="faqAccordion">
+
+                        <!-- Question 1 -->
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h6 class="mb-0" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    1. How can I change my password?
+                                    <span class="faq-icon">+</span>
+                                </h6>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Go to your profile page.</li>
+                                        <li>Click the <strong>"Recover Password"</strong> button.</li>
+                                        <li>An email will be sent to your registered address with instructions to reset your password.</li>
+                                        <li>Follow the instructions in the email to complete the process.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h6 class="mb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    2. How do I edit my username?
+                                    <span class="faq-icon">+</span>
+                                </h6>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Go to your profile page.</li>
+                                        <li>Click the <strong>"Edit Profile"</strong> button.</li>
+                                        <li>Change your username in the appropriate field.</li>
+                                        <li>Click <strong>"Save"</strong> to apply the changes.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h6 class="mb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    3. How do I contact support?
+                                    <span class="faq-icon">+</span>
+                                </h6>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="card-body">
+                                    To contact support, click the <strong>"Support"</strong> tab in the top menu and fill out the contact form. Our team will get back to you as soon as possible.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h6 class="mb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    4. Is my data safe on OpenCourt?
+                                    <span class="faq-icon">+</span>
+                                </h6>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Yes! We take security seriously. We use secure Firebase authentication and encrypted storage to protect your personal data.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="line">
+            <div class="col">
+                <img src="Imagens/logo_opencourt.png" class="logo-footer" />
+                <p>Find quality courts and organize your matches with ease. OpenCourt offers a practical and efficient platform so you can focus on what really matters: the game.</p>
+            </div>
+            <div class="col">
+                <h3>Our Location
+                    <div class="underline"><span></span></div>
+                </h3>
+                <p>Av. Aliança Povo M.F.A S/N, 2800-253 Almada, Portugal</p>
+                <ul>
+                    <li><span>Phone:</span><a href="tel:+212739280">+ 21 273 9280</a></li>
+                    <li><span>Email:</span><a href="mailto:opencourt.pt@gmail.com">opencourt.pt@gmail.com</a></li>
+                    <li><span>Website:</span><a href="index.html">opencourt.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Links
+                    <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="eng.html">Home</a></li>
+                    <li><a href="aboutuseng.html">About Us</a></li>
+                    <li><a href="contactuseng.html">Contact Us</a></li>
+                    <li><a href="faqeng.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Social Media
+                    <div class="underline"><span></span></div>
+                </h3>
+                <div class="footer-social-icons">
+                    <i class="fab fa-youtube"><a href="#"></a></i>
+                    <i class="fab fa-instagram"><a href="#"></a></i>
+                    <i class="fab fa-twitter"><a href="#"></a></i>
+                    <i class="fab fa-discord"><a href="#"></a></i>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <p class="copyright">
+            &copy; 2025 OpenCourt. Designed by <a href="index.html" target="_blank">OpenCourt</a>.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
