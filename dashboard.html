@@ -16,8 +16,7 @@
 <body>
     <div class="container-fluid mt-3">
         <div class="row">
-            <!-- Sidebar e Menu -->
-            <div class="col-12 col-md-3 p-3 text-black">
+            <div class="col-sm-3 p-3 text-black">
                 <input type="checkbox" id="check">
                 <label for="check">
                     <i class="fas fa-bars" id="btn"></i>
@@ -34,54 +33,51 @@
                 </div>
             </div>
 
-            <!-- Logo -->
-            <div class="col-12 col-md-6 p-3 text-black d-flex justify-content-center align-items-center">
+            <div class="col-sm-6 p-3 text-black d-flex justify-content-center align-items-center">
                 <a href="dashboard.html">
-                    <img src="./Imagens/logo_opencourt.png" alt="Logótipo Open Court" id="logo" class="img-fluid" />
+                    <img src="./Imagens/logo_opencourt.png" alt="Logótipo Open Court" id="logo" />
                 </a>
             </div>
 
-            <!-- Idioma e Login -->
-            <div class="col-12 col-md-3 p-3 text-black d-flex justify-content-center align-items-center flex-column flex-md-row gap-2">
+            <div class="col-sm-3 p-3 text-black d-flex justify-content-center align-items-center">
                 <div class="lang-menu">
                     <div class="selected-lang">Português</div>
                     <ul>
-                        <li><a href="dashboardeng.html" class="us">Inglês</a></li>
+                        <li>
+                            <a href="dashboardeng.html" class="us">Inglês</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="container-login position-relative">
+                <div class="container-login">
                     <img src="./Imagens/user-interface.png" alt="Clique aqui" class="image-button" id="imageButton">
-                    <div class="popup position-absolute" id="popup">
+
+                    <div class="popup" id="popup">
                         <button class="login" onclick="redirectToProfile()">Editar Perfil</button>
                         <button class="register" onclick="logout()">Sair</button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Conteúdo principal -->
-        <div class="row d-flex align-items-center justify-content-center py-5">
-            <div class="col-12 col-md-6 text-center px-4">
-                <h1 class="titleocstar">OpenCourt <img src="./Imagens/logostar.png" alt="logo estrela" class="starimg"></h1>
-                <div class="containertext">
-                    <h1>Encontra o local perfeito para praticar desporto!</h1>
-                    <p>Desde futebol até surf, descobre os melhores espaços perto de ti e organiza um jogo com os teus amigos. Fácil, rápido e divertido!</p>
-                    <h4>Descarrega a nossa aplicação e começa já!</h4>
+            <div class="row d-flex align-items-center justify-content-center py-5">
+                <div class="col-md-6 text-center px-4">
+                    <h1 class="titleocstar">OpenCourt <img src="./Imagens/logostar.png" alt="logo estrela" class="starimg"></h1>
+                    <div class="containertext">
+                        <h1>Encontra o local perfeito para praticar desporto!</h1>
+                        <p>Desde futebol até surf, descobre os melhores espaços perto de ti e organiza um jogo com os teus amigos. Fácil, rápido e divertido!</p>
+                        <h4>Descarrega a nossa aplicação e começa já!</h4>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-12 col-md-6 d-flex flex-column align-items-center">
-                <img src="./Imagens/phone.png" alt="Imagem de um telefone com a aplicação" class="img-fluid" id="phone-image">
-                <a href="app/opencourtapp.apk" class="btn btn-primary mt-3 d-flex align-items-center gap-2 download-button">
-                    <img src="./Imagens/download.png" alt="Ícone" class="button-icon">
-                    <span>Instalar Agora</span>
-                </a>
+                <div class="col-md-6 custom-flex-column">
+                    <img src="./Imagens/phone.png" alt="Imagem de um telefone com a aplicação" class="img-fluid" id="phone-image">
+                    <a href="app/opencourtapp.apk" class="download-button" download>
+                        <img src="./Imagens/download.png" alt="Ícone" class="button-icon">
+                        <span class="button-text">Instalar Agora</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Rodapé continua igual -->
-
 
     <footer>
         <div class="line">

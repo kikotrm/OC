@@ -660,52 +660,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 
-/* Estilo das imagens e nomes dos membros */
-
-.team-container {
-    display: flex;
-    justify-content: center;
-    /* Alinha as imagens no centro do contêiner */
-    gap: 100px;
-    /* Espaço entre as imagens */
-}
-
-.team-member {
-    position: relative;
-    width: 250px;
-    /* Define a largura das imagens */
-    height: 300px;
-    /* Ajuste de altura conforme necessário */
-}
-
-.team-member img {
-    width: 250px;
-    /* A imagem ocupa 100% da largura do contêiner */
-    height: 300px;
-    /* A altura da imagem será 100% do contêiner */
-    object-fit: cover;
-    /* Ajusta a imagem para cobrir o contêiner sem distorcer */
-    border-radius: 10px;
-    /* Arredonda as bordas das imagens */
-}
-
-.team-name {
-    position: absolute;
-    bottom: 0px;
-    /* Alinha o nome no fundo da imagem */
-    left: 0px;
-    /* Alinha o nome à esquerda da imagem */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Fundo semi-transparente para contraste */
-    color: white;
-    /* Cor do texto */
-    padding: 5px 10px;
-    /* Espaçamento interno */
-    font-weight: bold;
-    /* Texto em negrito */
-    border-radius: 5px;
-    /* Borda arredondada no fundo */
-}
 
 
 /* Ajustes individuais nos textos */
@@ -830,44 +784,87 @@ hr {
     }
 }
 
+/* Updated Download Button Styles */
 .download-button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #debb82;
+    justify-content: center;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #000000 0%, #333333 50%, #6b6b6b 100%);
     color: white;
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-width: 220px; /* Better for mobile touch */
+    text-decoration: none
+}
+
+.download-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 145, 0, 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .download-button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #000000 0%, #222222 50%, #6b6b6b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover::before {
+    opacity: 1;
 }
 
 .download-button:active {
-    background-color: #3d8b40;
-    /* Cor de fundo ao clicar */
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button-icon {
-    width: 20px;
-    /* Tamanho da imagem */
-    height: 20px;
-    margin-right: 10px;
-    /* Espaço entre a imagem e o texto */
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    filter: brightness(0) invert(1); /* Makes icon white */
+    transition: transform 0.3s ease;
+}
+
+.download-button:hover .button-icon {
+    transform: scale(1.1);
 }
 
 .button-text {
-    flex-grow: 1;
-    /* Faz o texto ocupar o espaço restante */
-    text-align: center;
-    /* Centraliza o texto */
-    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .download-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 180px;
+    }
+    
+    .button-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
 }
 
 #phone-image {
@@ -888,7 +885,8 @@ hr {
 
 .titleocstar {
     font-weight: bold;
-    padding-left: 300px;
+    justify-content: center;
+    margin-left: 200px;
 }
 
 .starimg {
@@ -899,14 +897,23 @@ hr {
 }
 
 .containertext {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 200px;
+    justify-content: center;
+    margin-left: 100px;
 }
+@media (max-width: 768px) {
+    .containertext {
+        margin-left: 0;
+    }
+
+    .titleocstar {
+        margin-left: 0;
+    }
+}
+
 
 
 /* Full height section */
@@ -1188,3 +1195,57 @@ hr {
     font-size: 10px;
     color: #000000;
 }
+
+/* Add to your style.css */
+
+/* Responsive container for about us */
+.containeraboutus {
+    padding: 20px; /* Reduced from 200px */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive images */
+.aboutus-image {
+    max-width: 700px;
+    height: auto;
+    width: auto; /* Remove fixed width */
+    margin-top: 100px;
+}
+@media (max-width: 768px) {
+    .aboutus-image {
+        max-width: 100%;
+        height: auto;
+        
+        margin-left: 0;
+    }
+
+   
+}
+
+
+.courtimageaboutus {
+    width: 1200px;
+    height: auto;
+    max-height: 500px; /* Adjust as needed */
+    margin: 50px 0; 
+}
+
+/* Team members grid */
+.team-container {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.team-member {
+    width: 250px;
+    height: 300px;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+}
+
